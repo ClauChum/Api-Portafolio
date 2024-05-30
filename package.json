@@ -2,5 +2,13 @@
   "dependencies": {
     "express": "^4.19.2",
     "node": "^20.14.0"
+  },
+  "scripts": {
+    "start": "node api/servidor.js",
+    "test": "nodemon api/servidor.js",
+    "build": "npm run build:change-dir && npm run build:clean && npm run build:copy",
+    "build:change-dir": "cd .",
+    "build:clean": "rimraf dist/",
+    "buil:copy": "copyfiles index.html archivos/* css/* img/* js/* dist"
   }
 }
